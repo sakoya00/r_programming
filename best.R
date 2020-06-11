@@ -31,11 +31,12 @@ best <- function(state, outcome) {
       
     
     hospitalrow <- integer()
+    #remember to convert to numeric or min will return wrong value
     hospitalrow <- which(as.numeric(staterows[ ,n]) == min(as.numeric(staterows [,n]), na.rm= TRUE)) 
     
     min <- numeric()
     min <- as.numeric(staterows [hospitalrow, n])
-    #must convert to numeric or it returns 10.1 as min of staterow[,23] for some reason
+    
     
   }
   lowhospital <- append (lowhospital, staterows [hospitalrow, 2])
